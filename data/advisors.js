@@ -6,16 +6,16 @@ export const advisors = {
     role: 'Tư vấn viên cấp cao',
     region: 'Bảo Việt Nhân Thọ Khánh Hòa',
     location: 'Nha Trang, Khánh Hòa',
-    phone: '0988 123 456',
-    zalo: '0988 123 456',
-    email: 'minhtho.baovietkh@gmail.com',
-    portrait: '/assets/nguyenhoangvu-transparent.png',
-    experience: '10+',
-    clients: '1.000+',
+    phone: '0357 579 713',
+    zalo: '0357 579 713',
+    email: 'nguyenhoangvub@baoviet.com.vn',
+    portrait: '/assets/nguyenhoangvu-removebg-preview.png',
+    experience: '5',
+    clients: '120',
     retention: '98%',
     contracts: '150+',
-    award: 'Sao Việt',
-    bio: 'Hơn 10 năm gắn bó với nghề, tôi luôn đặt chữ TÂM lên hàng đầu. Mỗi giải pháp tôi mang đến không chỉ là một hợp đồng bảo hiểm mà còn là sự an tâm và giá trị bền vững cho bạn và gia đình.'
+    award: '5 năm Sao Việt',
+    bio: 'Hơn 5 năm gắn bó với nghề, tôi luôn đặt chữ TÂM lên hàng đầu. Mỗi giải pháp tôi mang đến không chỉ là một hợp đồng bảo hiểm mà còn là sự an tâm và giá trị bền vững cho bạn và gia đình.'
   }
 };
 

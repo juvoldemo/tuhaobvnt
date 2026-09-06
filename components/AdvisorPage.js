@@ -1,4 +1,4 @@
-import { Award, BarChart3, BookOpen, GraduationCap, HandCoins, HandHeart, HeartHandshake, Home, Mail, MapPin, Phone, PiggyBank, ShieldCheck, Star, Users } from 'lucide-react';
+import { Award, BarChart3, BookOpen, Globe2, GraduationCap, HandCoins, HandHeart, HeartHandshake, Home, Mail, MapPin, Phone, PiggyBank, ShieldCheck, Star, Users } from 'lucide-react';
 
 const benefits = [
   { icon: ShieldCheck, title: 'Bảo vệ', text: 'Vững vàng tài chính trước những rủi ro cuộc sống.' },
@@ -19,28 +19,28 @@ export default function AdvisorPage({ advisor: a }) {
     <section className="hero">
       <div className="hero-sky" /><div className="coast" />
       <header><img className="brand-logo" src="/assets/bao-viet-life-logo-transparent.png" alt="Bảo Việt Life - Bảo Việt Nhân Thọ"/></header>
-      <div className="brand-message">Bảo vệ<br/><span>hạnh phúc Việt</span><i>♡</i></div>
-      <div className="hero-copy"><p>{a.role}</p><h1>{(a.nameLines || [a.name]).map((line, index) => <span key={line}>{line}{index < (a.nameLines?.length || 1) - 1 && <br/>}</span>)}</h1><em>An tâm hôm nay<br/>Vững vàng tương lai</em></div>
+      <div className="hero-copy"><p>{a.role}</p><h1>{(a.nameLines || [a.name]).map((line, index) => <span key={line}>{line}{index < (a.nameLines?.length || 1) - 1 && <br/>}</span>)}</h1><img className="sao-viet-logo" src="/assets/sao-viet-logo.png" alt="Sao Việt"/></div>
       <div className="portrait-ring"><div className="saoviet-mark"><Star/><b>SAO VIỆT</b><small>NHIỀU NĂM LIỀN</small></div><img src={a.portrait} alt={a.name}/></div>
-      <div className="trust-lines"><span><HeartHandshake/>Tư vấn tận tâm – Giải pháp phù hợp</span><span><Users/>Đồng hành lâu dài – Bảo vệ trọn đời</span></div>
       <div className="gold-swoop" />
     </section>
 
     <section className="quick-facts">
-      <div><MapPin/><span>{a.region}</span></div><div><ShieldCheck/><span>{a.experience} năm kinh nghiệm</span></div><div><Users/><span>{a.clients} gia đình tin tưởng</span></div>
+      <div><span className="fact-icon gold"><Globe2/></span><span className="fact-copy"><b><span className="fact-nowrap">Bảo Việt Nhân Thọ</span><span className="fact-line">Khánh Hòa</span></b></span></div>
+      <div><span className="fact-icon"><ShieldCheck/></span><span className="fact-copy"><b><span className="fact-lead">5+</span><span>Năm kinh nghiệm</span></b></span></div>
+      <div><span className="fact-icon"><Users/></span><span className="fact-copy"><b><span className="fact-lead">120</span><span>Gia đình được bảo vệ</span></b></span></div>
     </section>
 
     <section className="about card" id="about"><div><Title>Về tôi</Title><p>{a.bio}</p></div><HandHeart className="about-icon"/></section>
 
-    <section className="numbers blue-section"><Title light>Những con số ấn tượng</Title><div className="stat-grid">
-      <Stat icon={Award} value={a.experience} label="Năm kinh nghiệm tư vấn" gold/><Stat icon={Users} value={a.clients} label="Khách hàng đã tin tưởng"/><Stat icon={ShieldCheck} value={a.retention} label="Tỷ lệ duy trì hợp đồng" gold/><Stat icon={BarChart3} value={a.contracts} label="Hợp đồng giá trị cao"/><Stat icon={Star} value={a.award} label="Danh hiệu nổi bật" gold/>
-    </div><small>* Số liệu cập nhật gần nhất</small></section>
+    <section className="numbers blue-section"><Title light>Tôi là ai?</Title><div className="stat-grid">
+      <Stat icon={Award} value={a.experience} label="Năm kinh nghiệm tư vấn" gold/><Stat icon={Users} value={a.clients} label="Khách hàng đã tin tưởng"/><Stat icon={Star} value={a.award} label="Danh hiệu nổi bật" gold/>
+    </div></section>
 
     <section className="benefits"><Title>Tôi mang đến cho bạn</Title><div className="benefit-grid">{benefits.map(({icon: Icon,title,text}) => <article key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div></section>
 
     <section className="solutions" id="solutions"><Title>Giải pháp tôi tư vấn</Title><div className="solution-grid">{solutions.map(({icon: Icon,title}) => <article key={title}><Icon/><b>{title}</b></article>)}</div><div className="promise"><HeartHandshake/><span><b>Đồng hành cùng bạn và gia đình</b><small>Trên mọi chặng đường cuộc sống</small></span></div></section>
 
-    <section className="contact blue-section" id="contact"><Title light>Kết nối với tôi</Title><div className="contact-grid"><div className="contact-list"><a href={`tel:${tel}`}><Phone/>{a.phone}</a><a href={`https://zalo.me/${tel}`}><MessageIcon/>Zalo {a.zalo}</a><a href={`mailto:${a.email}`}><Mail/>{a.email}</a><span><MapPin/>{a.location}</span></div><a className="nfc" href={`tel:${tel}`}><div className="waves">)))</div><b>Chạm để gọi ngay</b><small>Kết nối trực tiếp với tôi</small></a></div><p className="thanks">Cảm ơn bạn đã ghé thăm!<br/>Chúc bạn và gia đình luôn bình an, hạnh phúc.</p></section>
+    <section className="contact blue-section" id="contact"><Title light>Kết nối với tôi</Title><div className="contact-grid"><div className="contact-list"><a href={`tel:${tel}`}><Phone/>{a.phone}</a><a href={`https://zalo.me/${tel}`}><MessageIcon/>Zalo {a.zalo}</a><a href={`mailto:${a.email}`}><Mail/>{a.email}</a><span><MapPin/>{a.location}</span></div><a className="nfc" href={`tel:${tel}`}><span className="nfc-icon"><Phone/></span><b>Chạm để gọi ngay</b><small>Kết nối trực tiếp với tôi</small></a></div><p className="thanks">Cảm ơn bạn đã ghé thăm!<br/>Chúc bạn và gia đình luôn bình an, hạnh phúc.</p></section>
     <a className="floating-call" href={`tel:${tel}`}><Phone/><span>Gọi tư vấn</span></a>
   </main>;
 }
