@@ -7,6 +7,10 @@ import { uploadWithProgress, prepareUploadImage } from '@/lib/upload-client';
 import { riderProducts } from '@/data/products';
 const groups = [{ key: 'journey', title: 'Hành trình của tôi' }];
 export default function AdminPanel({ authenticated, advisors }) {
+  const [advisorList, setAdvisorList] = useState(advisors);
+  const [showCreate, setShowCreate] = useState(false);
+  const [newName, setNewName] = useState('');
+  const [created, setCreated] = useState(null);
   const [loggedIn, setLoggedIn] = useState(authenticated);
   const [slug, setSlug] = useState(advisors[0]?.slug || '');
   const [advisor, setAdvisor] = useState(null);
@@ -38,6 +42,18 @@ export default function AdminPanel({ authenticated, advisors }) {
     }).catch(error => { if (error.name !== 'AbortError') setError(error.message); });
     return () => controller.abort();
   }, [loggedIn]);
+  async function addAdvisor(event) {
+    event.preventDefault();
+    if (busy) return;
+    setBusy(true); setError(''); setCreated(null);
+    try {
+      const response = await fetch('/api/admin/advisors', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: newName }) });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error);
+      setAdvisorList(items => [...items, data]); setSlug(data.slug);
+      setCreated(data); setNewName(''); setShowCreate(false);
+    } catch (error) { setError(error.message); } finally { setBusy(false); }
+  }
   async function login(event) {
     event.preventDefault(); setBusy(true); setError('');
     try {
@@ -101,7 +117,10 @@ export default function AdminPanel({ authenticated, advisors }) {
       {company && <form key="shared-benefit-links" className="admin-card admin-contact-form" onSubmit={event => { event.preventDefault(); const form = new FormData(event.currentTarget); form.set('action', 'benefit-links'); save(form); }}><h2>Link “Tôi mang đến cho bạn” — Dùng chung</h2><p>Áp dụng cho tất cả tư vấn viên. Gán link cho từng khối. Để trống nếu chưa có link. Link mở trong tab mới.</p>{[{ key: 'protection', title: 'Bảo vệ' }, { key: 'savings', title: 'Tích lũy' }, { key: 'education', title: 'Giáo dục' }].map(({ key, title }) => <label key={key}>{title}<input type="url" name={key} maxLength={2048} placeholder="https://..." defaultValue={company.benefitLinks?.[key] || ''}/></label>)}<button disabled={busy}>Lưu link</button></form>}
       </div>
       <div className="admin-profile"><h2>Nội dung riêng của tư vấn viên</h2>
-      <label className="admin-select">Tư vấn viên<select value={slug} disabled={busy} onChange={event => setSlug(event.target.value)}>{advisors.map(item => <option value={item.slug} key={item.slug}>{item.name}</option>)}</select></label>
+      <button type="button" disabled={busy} onClick={() => setShowCreate(value => !value)} aria-expanded={showCreate}>{showCreate ? 'Đóng' : '+ Thêm tư vấn viên'}</button>
+      {showCreate && <form className="admin-card admin-contact-form" onSubmit={addAdvisor}><h2>Thêm tư vấn viên</h2><label>Họ và tên<input value={newName} onChange={event => setNewName(event.target.value)} maxLength={120} required disabled={busy} placeholder="Ví dụ: Nguyễn Văn An"/></label><p>Đường dẫn riêng được tạo tự động theo tên. Nếu trùng, hệ thống sẽ thêm số ở cuối.</p><button disabled={busy || !newName.trim()}>{busy ? 'Đang tạo…' : 'Tạo tư vấn viên'}</button></form>}
+      {created && <p className="admin-success" role="status">Đã tạo {created.name}. Đường dẫn: <a href={`/${created.slug}`} target="_blank" rel="noreferrer">/{created.slug} ↗</a></p>}
+      <label className="admin-select">Tư vấn viên<select value={slug} disabled={busy} onChange={event => setSlug(event.target.value)}>{advisorList.map(item => <option value={item.slug} key={item.slug}>{item.name}</option>)}</select></label>
       {advisor ? <><a className="admin-preview-link" href={`/${slug}`} target="_blank" rel="noreferrer">Xem trang {advisor.name} ↗</a>
         <div className="admin-profile-fields"><form className="admin-card admin-bio-form" onSubmit={event => { event.preventDefault(); const form = new FormData(); form.set('action', 'bio'); form.set('bio', bio); form.set('bioHtml', bioHtml); save(form); }}><h2>Về tôi</h2><BioEditor key={slug} text={bio} html={bioHtml} disabled={busy} onChange={value => { setBio(value.text); setBioHtml(value.html); }}/><button disabled={busy}>Lưu giới thiệu</button></form>
         <form key={`contact-${slug}`} className="admin-card admin-contact-form" onSubmit={event => { event.preventDefault(); const form = new FormData(event.currentTarget); form.set('action', 'contact'); save(form); }}><h2>Kết nối với tôi</h2><label>Điện thoại<input name="phone" type="tel" maxLength={25} defaultValue={advisor.phone || ''}/></label><label>Zalo<input name="zalo" type="tel" maxLength={25} defaultValue={advisor.zalo || ''}/></label><label>Email<input name="email" type="email" maxLength={250} defaultValue={advisor.email || ''}/></label><label>Địa chỉ<input name="location" maxLength={250} defaultValue={advisor.location || ''}/></label><button disabled={busy}>Lưu thông tin liên hệ</button></form>
