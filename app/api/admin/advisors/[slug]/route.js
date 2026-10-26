@@ -6,6 +6,7 @@ import { randomUUID } from 'node:crypto';
 import sharp from 'sharp';
 import { riderProducts } from '@/data/products';
 import { sanitizeBio, bioText } from '@/lib/bio';
+import { supabaseEnabled, uploadRemoteImage } from '@/lib/supabase-store.mjs';
 
 export const runtime = 'nodejs';
 const groups = ['company', 'journey', 'activities'];
@@ -80,8 +81,13 @@ export async function POST(request, { params }) {
         const id = `${randomUUID()}.webp`;
         prepared.push({ id, buffer: result.data, image: { src: `/api/media/${id}`, width: result.info.width, height: result.info.height, alt: file.name.slice(0, 200) } });
       }
-      await fs.mkdir(path.join(contentDir, 'uploads'), { recursive: true });
-      for (const item of prepared) await fs.writeFile(path.join(contentDir, 'uploads', item.id), item.buffer);
+      if (supabaseEnabled()) {
+        for (const item of prepared) item.image.src = await uploadRemoteImage(item.id, item.buffer);
+      } else {
+        if (process.env.VERCEL) throw new Error('Hãy cấu hình Supabase trước khi tải ảnh lên Vercel.');
+        await fs.mkdir(path.join(contentDir, 'uploads'), { recursive: true });
+        for (const item of prepared) await fs.writeFile(path.join(contentDir, 'uploads', item.id), item.buffer);
+      }
       await updateContent(slug, current => group === 'portrait' ? { ...current, portrait: prepared[0].image.src } : { ...current, galleries: { ...current.galleries, [group]: [...(current.galleries?.[group] || []), ...prepared.map(item => item.image)] } });
     } else if (action === 'reorder') {
       const group = form.get('group');

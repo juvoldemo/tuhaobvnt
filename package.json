@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "content:export": "node scripts/export-content.mjs",
+    "content:migrate": "node scripts/migrate-supabase.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import SortableGallery from './SortableGallery';
 import BioEditor from './BioEditor';
-import { uploadWithProgress } from '@/lib/upload-client';
+import { uploadWithProgress, prepareUploadImage } from '@/lib/upload-client';
 import { riderProducts } from '@/data/products';
 const groups = [{ key: 'journey', title: 'Hành trình của tôi' }];
 export default function AdminPanel({ authenticated, advisors }) {
@@ -73,8 +73,8 @@ export default function AdminPanel({ authenticated, advisors }) {
     const url = shared ? '/api/admin/company' : `/api/admin/advisors/${slug}`;
     setUploadStatus({ group, total: files.length, completed: 0, percent: 0, stage: 'uploading' });
     try {
-      for (let offset = 0; offset < files.length; offset += 10) {
-        const batch = files.slice(offset, offset + 10);
+      for (let offset = 0; offset < files.length; offset += 1) {
+        const batch = [await prepareUploadImage(files[offset])];
         const form = new FormData(); form.set('action', 'upload'); form.set('group', group);
         batch.forEach(file => form.append('files', file));
         const data = await uploadWithProgress(url, form, fraction => {
@@ -127,5 +127,5 @@ function ThumbnailPicker({ group, content, busy, save }) {
   </div>;
 }
 function UploadForm({ busy, portrait, onSubmit, progress }) {
-  return <form className="admin-upload" onSubmit={onSubmit}><label>{portrait ? 'Chọn ảnh chân dung' : 'Chọn ảnh cho slideshow'}<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple={!portrait} required disabled={busy}/></label><small>PNG, JPG, WebP · Tối đa 10 MB/ảnh.{!portrait && ' Có thể chọn nhiều ảnh; tự động chia lượt 10 ảnh. Kéo thả để đổi thứ tự sau khi tải lên.'}</small><button disabled={busy}>{busy ? 'Đang xử lý…' : 'Tải ảnh lên'}</button>{progress && <div className={`upload-progress ${progress.stage}`} role="status" aria-live="polite"><div><strong>{progress.stage === 'done' ? 'Tải ảnh hoàn tất' : progress.stage === 'error' ? 'Tải ảnh bị gián đoạn' : progress.stage === 'processing' ? 'Đang xử lý và lưu ảnh…' : 'Đang tải ảnh…'}</strong><span>{progress.percent}%</span></div><progress max="100" value={progress.percent} aria-label="Tiến độ tải ảnh"/><small>Đã lưu {progress.completed}/{progress.total} ảnh</small></div>}</form>;
+  return <form className="admin-upload" onSubmit={onSubmit}><label>{portrait ? 'Chọn ảnh chân dung' : 'Chọn ảnh cho slideshow'}<input name="files" type="file" accept="image/png,image/jpeg,image/webp" multiple={!portrait} required disabled={busy}/></label><small>PNG, JPG, WebP · Tối đa 10 MB/ảnh.{!portrait && ' Có thể chọn nhiều ảnh; tự động tối ưu và tải lần lượt. Kéo thả để đổi thứ tự sau khi tải lên.'}</small><button disabled={busy}>{busy ? 'Đang xử lý…' : 'Tải ảnh lên'}</button>{progress && <div className={`upload-progress ${progress.stage}`} role="status" aria-live="polite"><div><strong>{progress.stage === 'done' ? 'Tải ảnh hoàn tất' : progress.stage === 'error' ? 'Tải ảnh bị gián đoạn' : progress.stage === 'processing' ? 'Đang xử lý và lưu ảnh…' : 'Đang tải ảnh…'}</strong><span>{progress.percent}%</span></div><progress max="100" value={progress.percent} aria-label="Tiến độ tải ảnh"/><small>Đã lưu {progress.completed}/{progress.total} ảnh</small></div>}</form>;
 }

@@ -1,0 +1,417 @@
+{
+  "tranthiminhtho": {
+    "galleries": {
+      "company": [
+        {
+          "src": "/uploads/c278805e-2a5c-40a7-b244-82fe7762cf4a.webp",
+          "width": 1672,
+          "height": 941,
+          "alt": "b15516d9-929f-4cea-985b-710220fbe483.jpg"
+        }
+      ],
+      "journey": [
+        {
+          "src": "/uploads/e1d71836-06d2-4c78-8238-92bd7e9820e8.webp",
+          "width": 960,
+          "height": 1280,
+          "alt": "9.jpg"
+        },
+        {
+          "src": "/uploads/f509c27c-e6e9-4b6d-9c28-3721a6b4c7ff.webp",
+          "width": 896,
+          "height": 1195,
+          "alt": "8.jpg"
+        },
+        {
+          "src": "/uploads/4f62de79-95f6-4d54-ac5d-664cb06a0173.webp",
+          "width": 853,
+          "height": 1280,
+          "alt": "7.jpg"
+        },
+        {
+          "src": "/uploads/69933d90-e377-4c5c-a4a3-d6405a152e64.webp",
+          "width": 853,
+          "height": 1280,
+          "alt": "6.jpg"
+        },
+        {
+          "src": "/uploads/65df6c38-802d-475e-9105-a903edd52300.webp",
+          "width": 1280,
+          "height": 853,
+          "alt": "5.jpg"
+        },
+        {
+          "src": "/uploads/0f673600-eb4d-45a3-bebd-28d2cdcfae01.webp",
+          "width": 853,
+          "height": 1280,
+          "alt": "4.jpg"
+        },
+        {
+          "src": "/uploads/cdadffe2-d63f-4f96-8dcc-701541a6309f.webp",
+          "width": 1280,
+          "height": 853,
+          "alt": "3.jpg"
+        },
+        {
+          "src": "/uploads/8aaa1fa1-4320-4e14-8143-db22c9798c6a.webp",
+          "width": 853,
+          "height": 1280,
+          "alt": "2.jpg"
+        },
+        {
+          "src": "/uploads/5f6a8f68-f670-44eb-942d-6e0ae51a1256.webp",
+          "width": 1280,
+          "height": 853,
+          "alt": "1.jpg"
+        },
+        {
+          "src": "/uploads/9b530e0e-f254-401b-a716-dd9960eeb63b.webp",
+          "width": 1672,
+          "height": 941,
+          "alt": "e772ab2e-0bb9-4781-b7a5-b4b0456b5882.png"
+        }
+      ]
+    },
+    "bio": "22 năm gắn bó cùng Bảo Việt Nhân thọ Khánh Hòa kể từ ngày 30/06/2004 là một hành trình đầy tự hào, nỗ lực và cống hiến.\nĐặc biệt, 20 năm đạt danh hiệu Sao Việt – danh hiệu cao quý dành cho những cá nhân xuất sắc nhất của Bảo Việt Nhân thọ – chính là minh chứng cho sự kiên trì, tận tâm và không ngừng phấn đấu.\nVới tôi, mỗi thành tựu không chỉ là sự ghi nhận mà còn là động lực để tiếp tục lan tỏa những giá trị tốt đẹp, đồng hành cùng khách hàng và chinh phục những cột mốc mới.",
+    "thumbnails": {
+      "journey": {
+        "src": "/uploads/9b530e0e-f254-401b-a716-dd9960eeb63b.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": "e772ab2e-0bb9-4781-b7a5-b4b0456b5882.png"
+      }
+    },
+    "phone": "0914152211",
+    "zalo": "0914152211",
+    "email": "tranthiminhtho@baoviet.com.vn",
+    "location": "05 Hùng Vương, Nha Trang, Khánh Hòa",
+    "clients": "120+",
+    "bioHtml": "<b>22 năm</b> gắn bó cùng Bảo Việt Nhân thọ Khánh Hòa kể từ ngày <b>30/06/2004</b> là một hành trình đầy tự hào, nỗ lực và cống hiến.<br />Đặc biệt, <b>20 năm đạt danh hiệu Sao Việt</b> – danh hiệu cao quý dành cho những cá nhân xuất sắc nhất của Bảo Việt Nhân thọ – chính là minh chứng cho sự kiên trì, tận tâm và không ngừng phấn đấu.<br />Với tôi, mỗi thành tựu không chỉ là sự ghi nhận mà còn là động lực để tiếp tục lan tỏa những giá trị tốt đẹp, đồng hành cùng khách hàng và chinh phục những cột mốc mới."
+  },
+  "__company": {
+    "galleries": {
+      "company": [
+        {
+          "src": "/uploads/b11d7a0f-fa76-49c3-b21b-e378de19713b.webp",
+          "width": 1672,
+          "height": 941,
+          "alt": "b15516d9-929f-4cea-985b-710220fbe483.jpg"
+        },
+        {
+          "src": "/uploads/1b1b7bbf-3d57-4144-b46e-70c633fe4806.webp",
+          "width": 1378,
+          "height": 975,
+          "alt": "H1.png"
+        },
+        {
+          "src": "/uploads/57aa056a-d707-4737-9086-a682678fdae7.webp",
+          "width": 2048,
+          "height": 1366,
+          "alt": "f.jpg"
+        },
+        {
+          "src": "/uploads/831ab946-6e7f-4771-a3ff-018c7623a6d4.webp",
+          "width": 690,
+          "height": 480,
+          "alt": "e.webp"
+        },
+        {
+          "src": "/uploads/23c09bb3-25fc-4ee3-80a9-2b4728e8cc15.webp",
+          "width": 703,
+          "height": 720,
+          "alt": "d.webp"
+        },
+        {
+          "src": "/uploads/b0587929-a273-435b-bf24-6a7e448aadbf.webp",
+          "width": 1672,
+          "height": 941,
+          "alt": "2dc876e9-46d3-42a8-ade4-3e8838eb6496.png"
+        },
+        {
+          "src": "/uploads/38cd6d98-9ca8-4907-a655-9c61cf224c1b.webp",
+          "width": 703,
+          "height": 720,
+          "alt": "v.webp"
+        },
+        {
+          "src": "/uploads/9a3bf89e-8b47-4433-bdbe-a48590d5b3da.webp",
+          "width": 554,
+          "height": 554,
+          "alt": "c.jpg"
+        },
+        {
+          "src": "/uploads/b955d4fa-41fd-4d62-90aa-4be335b8b842.webp",
+          "width": 720,
+          "height": 720,
+          "alt": "b.webp"
+        },
+        {
+          "src": "/uploads/4a2068b9-3155-4407-b5e5-53b1cca4b149.webp",
+          "width": 678,
+          "height": 452,
+          "alt": "a.jpg"
+        },
+        {
+          "src": "/uploads/ef11cb31-63f8-4dbf-b263-396d0eb52840.webp",
+          "width": 1875,
+          "height": 1875,
+          "alt": "505922837_769958945354382_7207098686902299111_n.jpg"
+        },
+        {
+          "src": "/uploads/b51263e2-de6d-450d-9129-359207c9f754.webp",
+          "width": 2048,
+          "height": 1366,
+          "alt": "514074279_782901330726810_8498642825219965611_n.jpg"
+        },
+        {
+          "src": "/uploads/794632bb-168b-4d84-b16b-0462eb7183d3.webp",
+          "width": 2048,
+          "height": 2046,
+          "alt": "660747277_999961975687410_4984801935775021749_n.jpg"
+        },
+        {
+          "src": "/uploads/f580d2e1-9538-45f5-9aad-f7bf33925eb5.webp",
+          "width": 1181,
+          "height": 1180,
+          "alt": "678588015_1021017560248518_6889978717906260761_n.jpg"
+        },
+        {
+          "src": "/uploads/04e1244d-e518-4ee6-a3ad-bde9659221ca.webp",
+          "width": 1875,
+          "height": 1875,
+          "alt": "740052784_2349324952141644_5889953375819948546_n.jpg"
+        },
+        {
+          "src": "/uploads/ba6483d6-9858-4921-9a7a-bd209c956e51.webp",
+          "width": 1672,
+          "height": 964,
+          "alt": "767161540_2223925808182492_225864164134639419_n.jpg"
+        },
+        {
+          "src": "/uploads/094d80c1-f9ff-4b93-9722-aa70bfcee3d0.webp",
+          "width": 2048,
+          "height": 1581,
+          "alt": "785258177_2513234592478559_2589445446503542728_n.jpg"
+        }
+      ],
+      "activities": [
+        {
+          "src": "/uploads/7e9b0a94-1939-49d8-a2ec-f73992c5b813.webp",
+          "width": 2048,
+          "height": 1366,
+          "alt": "494070296_736703765346567_9022802246694680359_n.jpg"
+        },
+        {
+          "src": "/uploads/9b1409c8-6a89-45e4-8c10-d7f6a1157420.webp",
+          "width": 1280,
+          "height": 894,
+          "alt": "569072073_877652107918398_7579482083441120555_n.jpg"
+        },
+        {
+          "src": "/uploads/163e2f54-7474-4034-88de-039710e74b42.webp",
+          "width": 2048,
+          "height": 1536,
+          "alt": "573913509_883609067322702_1429295399753494346_n.jpg"
+        },
+        {
+          "src": "/uploads/44707596-186c-4786-b603-f45f83b5bf73.webp",
+          "width": 1000,
+          "height": 1000,
+          "alt": "577845239_888679146815694_481210681435365495_n.jpg"
+        },
+        {
+          "src": "/uploads/c392b50b-2b23-494b-87b0-27c48b92a8fe.webp",
+          "width": 1350,
+          "height": 1800,
+          "alt": "586158897_902177125465896_2982005798146484793_n.jpg"
+        },
+        {
+          "src": "/uploads/28b60e79-ac4a-4f33-96d0-e17fc90cd316.webp",
+          "width": 2048,
+          "height": 1536,
+          "alt": "594068278_910988511251424_4252767151433836908_n.jpg"
+        },
+        {
+          "src": "/uploads/f26bbd0b-979f-47bf-944b-62ab81386300.webp",
+          "width": 2048,
+          "height": 1150,
+          "alt": "633594987_964819149201693_6125147955242976846_n.jpg"
+        },
+        {
+          "src": "/uploads/ac93ec3d-3c03-471c-a004-30d48717e16a.webp",
+          "width": 1500,
+          "height": 1125,
+          "alt": "633449141_964822199201388_8684046659847552791_n.jpg"
+        },
+        {
+          "src": "/uploads/2b22730b-92df-4725-8fa3-c67592101ed3.webp",
+          "width": 2048,
+          "height": 1362,
+          "alt": "700625869_1041685438181730_1744424079789966046_n.jpg"
+        },
+        {
+          "src": "/uploads/3c73d25a-b658-471a-8d4b-a900b56f9c88.webp",
+          "width": 2035,
+          "height": 1359,
+          "alt": "702250567_1041685541515053_2703415464667531296_n.jpg"
+        },
+        {
+          "src": "/uploads/99543c95-1e31-41ba-9735-bb684b75976b.webp",
+          "width": 1560,
+          "height": 1125,
+          "alt": "709226365_1048350214181919_3111694100581140535_n.jpg"
+        },
+        {
+          "src": "/uploads/29ec21f3-3673-4a08-a21a-bff6caa1eeff.webp",
+          "width": 2048,
+          "height": 1536,
+          "alt": "722131864_1031171069567107_2729974288284023993_n.jpg"
+        },
+        {
+          "src": "/uploads/ebb95777-7111-4abf-bb81-68c29222077e.webp",
+          "width": 2048,
+          "height": 1536,
+          "alt": "721644280_974424335425757_8616436381269610101_n.jpg"
+        },
+        {
+          "src": "/uploads/3ff43d9d-6273-4649-8ff6-3811e6f1c4d1.webp",
+          "width": 1536,
+          "height": 2048,
+          "alt": "721410868_1064860632530877_63639538951670273_n.jpg"
+        },
+        {
+          "src": "/uploads/dd6ce6fe-87a1-42e6-931a-8644887c1ce6.webp",
+          "width": 1179,
+          "height": 1278,
+          "alt": "724478788_1045449664658133_7976622250633644813_n.jpg"
+        },
+        {
+          "src": "/uploads/49823a68-bfa5-4aba-9ce3-4db726c9a0d3.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "731656722_1348063354126200_7301294328376403606_n.jpg"
+        },
+        {
+          "src": "/uploads/b744a511-e912-42f9-a72f-a7599874a572.webp",
+          "width": 1800,
+          "height": 1120,
+          "alt": "731479619_1544510473993746_3007616013038432483_n.jpg"
+        },
+        {
+          "src": "/uploads/35441bdf-b28a-4cad-a8b6-0c3c0511484e.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "747505181_1023189817366095_7269300974051182488_n.jpg"
+        },
+        {
+          "src": "/uploads/4eabe666-a13e-4c5a-a424-0aa14244319d.webp",
+          "width": 2048,
+          "height": 1365,
+          "alt": "747799760_1740396816976187_3513741551997471113_n.jpg"
+        },
+        {
+          "src": "/uploads/6f17d816-513a-4006-a974-c9fb5b217ba0.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "780045653_1083630687500180_5686755812040548762_n.jpg"
+        },
+        {
+          "src": "/uploads/1df01034-5dde-4db6-b665-b164c63512af.webp",
+          "width": 2000,
+          "height": 1500,
+          "alt": "793678457_1810572270378854_5955079549104808040_n.jpg"
+        },
+        {
+          "src": "/uploads/db025776-7f00-40d4-a4a6-345d3ae859ea.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "797106221_2134199447176093_8650230161430441335_n.jpg"
+        },
+        {
+          "src": "/uploads/69f4b064-399e-4de8-828f-308a39874bf1.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "791246124_1068210379298198_2654872817708513022_n.jpg"
+        },
+        {
+          "src": "/uploads/0a186db3-bdfb-4483-8104-5c349ffdbd19.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "797744918_1603989748092286_1561625691081960434_n.jpg"
+        },
+        {
+          "src": "/uploads/b301c0e2-77b3-49f9-a8eb-c7a89170d72c.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "797315959_4708034189519273_5451693518008758411_n.jpg"
+        },
+        {
+          "src": "/uploads/7b082e77-cb11-45ee-a53b-31ab7c07a2fe.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "797250481_1004256512621864_9196571767192921027_n.jpg"
+        },
+        {
+          "src": "/uploads/5d9e6a8a-c882-460d-9324-a1ffd081a1db.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "789250804_1561647291618508_7133865571749281108_n.jpg"
+        },
+        {
+          "src": "/uploads/82758993-d17e-49da-81b5-5fba57c73924.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "796969520_2129556150962125_8199855727750135229_n.jpg"
+        },
+        {
+          "src": "/uploads/6150f2c4-3d53-4e0e-b437-eb0f1e73726e.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "789446018_1807765057619316_5815296322946316633_n.jpg"
+        },
+        {
+          "src": "/uploads/298eaf1c-d758-412b-9281-3fe006e47f0c.webp",
+          "width": 2000,
+          "height": 2000,
+          "alt": "796324698_1083633171030337_7109788951436467055_n.jpg"
+        },
+        {
+          "src": "/uploads/f8c41c43-e050-4ff4-a885-733c53ec4d3c.webp",
+          "width": 2048,
+          "height": 1313,
+          "alt": "861234991_2166205794772953_656533486655372072_n.jpg"
+        }
+      ]
+    },
+    "thumbnails": {
+      "company": {
+        "src": "/uploads/b11d7a0f-fa76-49c3-b21b-e378de19713b.webp",
+        "width": 1672,
+        "height": 941,
+        "alt": "b15516d9-929f-4cea-985b-710220fbe483.jpg"
+      },
+      "activities": {
+        "src": "/uploads/7e9b0a94-1939-49d8-a2ec-f73992c5b813.webp",
+        "width": 2048,
+        "height": 1366,
+        "alt": "494070296_736703765346567_9022802246694680359_n.jpg"
+      }
+    },
+    "benefitLinks": {
+      "protection": "https://www.baovietnhantho.com.vn/san-pham/bao-ve/bao-hiem-lien-ket-chung-an-khang-nhu-y",
+      "savings": "https://www.baovietnhantho.com.vn/san-pham/tich-luy/bao-hiem-lien-ket-chung-an-thinh-phuc-nien",
+      "education": "https://www.baovietnhantho.com.vn/san-pham/tich-luy/bao-hiem-lien-ket-chung-an-sinh-giao-duc"
+    },
+    "productLinks": {
+      "an-vui-song-khoe": "https://www.baovietnhantho.com.vn/san-pham/bo-tro/san-pham-bao-hiem-cham-soc-suc-khoe-toan-dien-an-vui-song-khoe",
+      "benh-ly-nghiem-trong": "https://www.baovietnhantho.com.vn/san-pham/bo-tro/bao-hiem-benh-ly-nghiem-trong-toan-dien",
+      "ho-tro-nguoi-duoc-bao-hiem": "https://www.baovietnhantho.com.vn/san-pham/bo-tro/bao-hiem-ho-tro-dong-phi-bao-hiem-do-benh-ly-nghiem-trong-cho-nguoi-duoc-bao-hiem",
+      "ho-tro-ben-mua-va-nguoi-phoi": "https://www.baovietnhantho.com.vn/san-pham/bo-tro/bao-hiem-ho-tro-dong-phi-bao-hiem-do-benh-ly-nghiem-trong-cho-ben-mua-bao-hiem-va-nguoi-hon-phoi",
+      "tro-cap-vien-phi": "https://www.baovietnhantho.com.vn/san-pham/bo-tro/san-pham-bao-hiem-tro-cap-vien-phi-va-phau-thuat",
+      "benh-nan-y": "https://www.baovietnhantho.com.vn/san-pham/bo-tro/bao-hiem-benh-nan-y",
+      "tu-vong-thuong-tat-tai-nan": "https://www.baovietnhantho.com.vn/san-pham/bo-tro/bao-hiem-tu-vong-va-thuong-tat-nghiem-trong-do-tai-nan",
+      "thuong-tat-bo-phan": "https://www.baovietnhantho.com.vn/san-pham/bo-tro/bao-hiem-thuong-tat-bo-phan-vinh-vien-do-tai-nan-2-0",
+      "ho-tro-dong-phi-tu-vong": "http://baovietnhantho.com.vn/san-pham/bo-tro/bao-hiem-ho-tro-dong-phi-bao-hiem-do-tu-vong"
+    }
+  }
+}
