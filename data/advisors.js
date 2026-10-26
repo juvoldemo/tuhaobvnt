@@ -1,4 +1,16 @@
 export const advisors = {
+  tranthiminhtho: {
+    slug: 'tranthiminhtho',
+    name: 'Trần Thị Minh Thơ',
+    nameLines: ['Trần Thị', 'Minh Thơ'],
+    portrait: '/assets/tranthiminhtho.png',
+    role: 'Tư vấn viên Sao Việt',
+    saoViet: true,
+    region: 'Bảo Việt Nhân Thọ Khánh Hòa',
+    experience: '22',
+    phone: '',
+    bio: 'Thông tin giới thiệu đang được cập nhật.'
+  },
   nguyenhoangvu: {
     slug: 'nguyenhoangvu',
     name: 'Nguyễn Hoàng Vũ',

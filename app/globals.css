@@ -94,3 +94,142 @@
   .fact-copy b{font-size:clamp(6px,1.8vw,8px)}
   .fact-copy small{font-size:clamp(5px,1.45vw,6.5px)}
 }
+
+.admin-contact-form label{margin-bottom:14px}
+.upload-progress{padding:12px 14px;border:1px solid #cbdff3;border-radius:10px;background:#f2f8ff;color:var(--ink)}
+.upload-progress>div{display:flex;justify-content:space-between;gap:12px;font-size:12px}
+.upload-progress progress{display:block;width:100%;height:12px;margin:9px 0;accent-color:var(--blue)}
+.upload-progress.done{background:#eaf8ef;border-color:#a9d7b9}
+.upload-progress.done progress{accent-color:#23844b}
+.upload-progress.error{background:#fff0f0;border-color:#e8b7b7}
+/* Kéo thả thứ tự ảnh trong quản trị */
+.admin-images figure{touch-action:none;cursor:grab;user-select:none;transition:box-shadow .15s,border-color .15s}
+.admin-images figure.is-dragging{border:2px solid var(--gold);box-shadow:0 8px 22px #003b8240;cursor:grabbing;opacity:.75}
+.admin-images figure.sort-disabled{cursor:wait;opacity:.65}
+.admin-images .gallery-drag-handle{padding:8px 4px;background:transparent;color:var(--ink);cursor:grab;text-align:left}
+.admin-images .gallery-drag-handle:disabled{cursor:default}
+.gallery-sort-hint{font-size:13px;color:#536579;margin:18px 0 0}
+/* Thumbnail cho các khối bộ ảnh */
+.gallery-cards>button.has-thumbnail{padding:0 0 22px;overflow:hidden}
+.gallery-card-thumbnail{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.gallery-cards>button.has-thumbnail strong,.gallery-cards>button.has-thumbnail span{padding:0 10px}
+.admin-thumbnail-picker{margin:18px 0 24px;padding:18px;border:1px solid #d4e6fa;border-radius:12px;background:#f5f9ff}
+.admin-thumbnail-picker h3{margin:0;color:var(--ink);font-size:16px}
+.admin-thumbnail-picker p{font-size:13px}
+.admin-thumbnail-preview{display:block;width:min(100%,280px);aspect-ratio:16/10;object-fit:cover;border-radius:10px;margin-bottom:16px}
+/* Bộ ảnh giới thiệu và cửa sổ slideshow */
+.about p{white-space:pre-line;overflow-wrap:anywhere;text-align:justify;text-justify:inter-word}
+.about>div{min-width:0}
+.about-rich{font-size:14px;line-height:1.8;text-align:justify;overflow-wrap:anywhere;white-space:pre-wrap}
+.about-rich p,.about-rich div{margin:0 0 8px}
+.bio-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:9px;background:#f0f6fd;border:1px solid #b9cde0;border-bottom:0;border-radius:9px 9px 0 0}
+.admin-shell .bio-toolbar button{width:34px;height:34px;padding:0;background:white;color:var(--ink);border:1px solid #cbdceb;border-radius:5px;font-size:16px}
+.admin-shell .bio-toolbar label{display:flex;align-items:center;gap:5px;font-size:11px}
+.admin-shell .bio-toolbar select{width:76px;padding:6px}
+.admin-shell .bio-toolbar input[type=color]{width:42px;height:32px;padding:3px;cursor:pointer}
+.bio-editable{min-height:180px;max-height:400px;overflow:auto;border:1px solid #b9cde0;border-radius:0 0 9px 9px;padding:12px;background:#fff;outline:none;font-size:14px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}
+.bio-editable:focus{border-color:var(--blue);box-shadow:0 0 0 2px #0050a415}
+.bio-editable p{margin:0 0 8px}
+.bio-editor>small{display:block;font-size:11px;color:#536579;margin-top:7px}
+@media(max-width:600px){.about-rich{font-size:12px}}
+.gallery-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 25px 28px}
+.gallery-cards>button{font:inherit;cursor:pointer;border:1px solid #d4e6fa;border-radius:20px;padding:25px 14px;background:linear-gradient(145deg,#fff,#eaf4ff);color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:13px;box-shadow:0 6px 20px #00366a12}
+.gallery-cards>button:hover{border-color:var(--gold);transform:translateY(-2px)}
+.gallery-cards>button:last-child:nth-child(3){grid-column:1/-1}
+.gallery-cards>button:last-child:nth-child(3) .gallery-card-thumbnail{aspect-ratio:24/7;object-position:center}
+.gallery-cards>button>svg{width:38px;height:38px;color:#b68a1a}.gallery-cards strong{font-size:17px}.gallery-cards span{font-size:12px;display:flex;align-items:center;gap:5px}
+.gallery-dialog{border:0;padding:0;background:transparent;color:#10213a;max-width:calc(100vw - 32px);max-height:calc(100dvh - 32px);overflow:auto;border-radius:16px;box-shadow:0 20px 80px #0005}
+.gallery-dialog::backdrop{background:#001b36d9;backdrop-filter:blur(5px)}
+.gallery-modal{width:max-content;max-width:100%;background:#fff;border-radius:16px;overflow:hidden}
+.gallery-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 14px;color:var(--ink)}
+.gallery-toolbar strong{font-size:14px;min-width:0;overflow-wrap:anywhere}
+.gallery-toolbar button,.gallery-controls button{display:grid;place-items:center;flex-shrink:0;border:0;border-radius:50%;width:38px;height:38px;background:#eaf3ff;color:var(--ink);cursor:pointer}
+.gallery-image-frame{line-height:0;text-align:center}.gallery-image-frame img{display:block;width:auto;height:auto;max-width:calc(100vw - 32px);max-height:calc(100dvh - 180px);object-fit:contain}
+.gallery-controls{display:flex;justify-content:center;gap:25px;align-items:center;padding:10px;font-size:13px}.gallery-controls button:disabled{opacity:.3;cursor:default}.gallery-empty{padding:25px;line-height:1.6}.gallery-image-frame p{line-height:1.6;padding:20px}
+.admin-shell{max-width:1000px;padding:35px 24px 80px;margin:auto}.admin-heading{display:flex;justify-content:space-between;gap:20px;align-items:center}.admin-shell h1{color:var(--ink);margin-bottom:8px}.admin-shell h2{font-size:20px;color:var(--ink)}.admin-shell a{color:var(--blue)}.admin-shell p,.admin-shell small{line-height:1.7}.admin-card{background:#fff;border:1px solid #d5e2ef;box-shadow:0 8px 28px #003b8210;border-radius:18px;padding:24px;margin:22px 0}.admin-shell label{display:grid;gap:9px;font-size:14px;font-weight:600}.admin-shell textarea,.admin-shell input,.admin-shell select{width:100%;padding:12px;border:1px solid #b9cde0;border-radius:9px;background:white;font:inherit;color:#10213a}.admin-shell textarea{resize:vertical}.admin-shell button{font:inherit;font-size:14px;font-weight:600;background:var(--blue);color:#fff;border:0;border-radius:9px;padding:12px 18px;cursor:pointer}.admin-shell button:disabled{opacity:.5;cursor:wait}.admin-card>button{margin-top:15px}.admin-select{margin:25px 0 18px}.admin-upload{display:grid;gap:12px}.admin-upload button{justify-self:start}.admin-images{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:20px}.admin-images figure{margin:0;border:1px solid #d4e6fa;border-radius:12px;overflow:hidden}.admin-images img{display:block;width:100%;height:180px;object-fit:contain;background:#edf3f9}.admin-images figcaption{display:flex;align-items:center;justify-content:space-between;padding:8px;font-size:12px}.admin-images button{font-size:12px;padding:8px}.admin-portrait{max-width:180px;max-height:220px;object-fit:contain;margin-bottom:20px}.admin-error{padding:12px 16px;border-radius:10px;background:#ffe9e9;color:#9f1a1a}.admin-success{padding:12px 16px;border-radius:10px;background:#dff8e9;color:#14623b}
+button:focus-visible,a:focus-visible{outline:3px solid #eeb323;outline-offset:4px}
+@media(max-width:600px){.gallery-cards{margin:16px 12px 24px;gap:10px}.gallery-cards>button{padding:20px 10px;border-radius:16px}.gallery-cards strong{font-size:13px}.gallery-cards span{font-size:11px}.admin-shell{padding:24px 14px 60px}.admin-card{padding:18px}.admin-heading{align-items:flex-start}.admin-heading h1{font-size:25px}.admin-heading>button{padding:10px;white-space:nowrap}}
+
+.rider-products{columns:2;column-gap:30px;padding-left:20px;margin:20px 0 24px;color:var(--ink)}
+.rider-products li{break-inside:avoid;padding:0 0 12px 3px;font-size:13px;line-height:1.8;overflow-wrap:anywhere}
+.rider-products li::marker{color:#ba8d1b}
+.rider-products a{color:inherit;text-decoration:none}
+.rider-products a:hover{color:var(--blue);text-decoration:underline}
+@media(max-width:600px){.rider-products{columns:1;margin:16px 0 20px}.rider-products li{font-size:12px;padding-bottom:10px}}
+.benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.benefit-link{display:block;height:100%;color:inherit;text-decoration:none;border-radius:8px;transition:background .15s,color .15s}
+.benefit-link:hover{background:var(--pale);color:var(--blue)}
+/* Quản trị PC toàn chiều rộng, ưu tiên mật độ nội dung. */
+.admin-shell{width:100%;max-width:none;padding:24px 28px 48px;margin:0}
+.admin-heading{margin-bottom:22px}
+.admin-heading h1{font-size:28px;margin:10px 0 5px}
+.admin-heading p{font-size:13px;margin:0}
+.admin-workspace{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start}
+.admin-workspace>*{min-width:0}
+.admin-shared-content{display:grid;gap:18px;min-width:0}
+.admin-shell .admin-card{padding:20px;margin:0;border-radius:14px}
+.admin-shell .admin-card h2{font-size:18px;margin:0 0 14px}
+.admin-shell .admin-card>p{font-size:13px;margin:8px 0 16px}
+.admin-profile>h2{margin:0 0 12px;font-size:20px}
+.admin-profile .admin-select{margin:0;max-width:440px}
+.admin-preview-link{display:inline-block;font-size:13px;margin:12px 0 16px}
+.admin-profile-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start;margin-bottom:18px}
+.admin-profile-fields>*{min-width:0}
+.admin-profile .admin-select select{padding:9px 12px}
+.admin-shell input,.admin-shell select,.admin-shell textarea{font-size:13px;padding:9px 10px;min-width:0}
+.admin-shell label{font-size:13px;gap:6px}
+.admin-shell button{font-size:13px;padding:10px 14px}
+.admin-shell .admin-images{grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:10px;margin-top:12px}
+.admin-shell .admin-images img{height:140px}
+.admin-shell .admin-images figcaption{padding:5px;gap:4px}
+.admin-shell .admin-images button{font-size:11px;padding:7px}
+.admin-shell .admin-thumbnail-picker{display:grid;grid-template-columns:130px minmax(0,1fr);gap:8px 16px;padding:14px;margin:14px 0 16px}
+.admin-thumbnail-picker h3,.admin-thumbnail-picker>p,.admin-thumbnail-picker>small{grid-column:1/-1}
+.admin-shell .admin-thumbnail-picker>p{margin:0;font-size:12px}
+.admin-shell .admin-thumbnail-preview{width:130px;margin:0;grid-column:1;grid-row:3;align-self:center}
+.admin-thumbnail-picker>label{grid-column:2;grid-row:3;align-self:center}
+.admin-thumbnail-picker:not(:has(.admin-thumbnail-preview))>label{grid-column:1/-1}
+.admin-shell .admin-upload{gap:8px}
+.admin-shell .admin-upload small{font-size:11px}
+.admin-shell .admin-portrait{max-height:140px;max-width:130px;margin-bottom:12px}
+.admin-shell .admin-login{max-width:440px;margin:40px auto}
+@media(min-width:1400px){
+  .admin-workspace{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+  .admin-profile-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .admin-bio-form{grid-column:1/-1}
+  .admin-bio-form textarea{min-height:110px;max-height:200px}
+}
+@media(max-width:1000px){.admin-profile-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-bio-form{grid-column:1/-1}}
+@media(max-width:600px){
+  .admin-shell{padding:18px 12px 40px}
+  .admin-heading h1{font-size:23px}
+  .admin-shell .admin-card{padding:16px}
+  .admin-profile-fields{grid-template-columns:minmax(0,1fr)}
+  .admin-shell .admin-thumbnail-picker{grid-template-columns:90px minmax(0,1fr);gap:10px}
+  .admin-shell .admin-thumbnail-preview{width:90px}
+}
+/* Hai hồ sơ dùng chung tỷ lệ bố cục của template Nguyễn Hoàng Vũ. */
+.hero{container-type:inline-size;height:auto;aspect-ratio:820/600}
+.hero header{top:4%;left:3.05%;right:3.05%}
+.hero .brand-logo{width:26.46cqw}
+.hero .hero-copy{left:4.63%;top:23.33%;width:46%;z-index:4}
+.hero .hero-copy p{font-size:clamp(8px,2.07cqw,17px);font-weight:500;letter-spacing:0;margin:0 0 2.68cqw;white-space:nowrap;display:block}
+.hero .hero-copy p::before{display:none}
+.hero .hero-copy h1{font-size:min(4cqw,33px);line-height:1.2;letter-spacing:-.1cqw;padding:0;white-space:nowrap;text-shadow:none}
+.hero .hero-copy h1 span{white-space:nowrap}
+.hero .sao-viet-logo{width:27.44cqw;height:auto;margin-top:3.66cqw}
+.hero .portrait-ring{top:4%;right:1%;width:49%;height:84%;z-index:3;overflow:hidden}
+.hero .portrait-ring img{width:100%;height:100%;object-fit:cover;object-position:center top;transform:none}
+.quick-facts{grid-template-columns:repeat(3,minmax(0,1fr));margin:-48px 25px 16px;min-height:100px}
+.quick-facts>div{min-width:0}
+.fact-copy small{text-transform:none}
+.fact-icon.fact-brand-logo{background:transparent;box-shadow:none}
+.fact-brand-logo img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:600px){
+  .quick-facts{margin:-5.85vw 3.05% 16px;min-height:80px;padding:12px 5px;border-radius:18px}
+  .quick-facts>div{padding:0 5px;gap:5px}
+  .fact-icon{width:clamp(24px,6.34vw,38px);height:clamp(24px,6.34vw,38px);min-width:clamp(24px,6.34vw,38px)}
+  .quick-facts .fact-icon svg{width:20px;height:20px;min-width:20px}
+  .fact-copy b{font-size:clamp(6px,1.47vw,9px);line-height:1.3}
+  .fact-copy small{font-size:clamp(6px,1.3vw,8px)}
+}
