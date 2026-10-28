@@ -50,6 +50,10 @@ export async function POST(request, { params }) {
         benefitLinks[key] = link;
       }
       await updateContent(slug, current => ({ ...current, [action === 'product-links' ? 'productLinks' : 'benefitLinks']: benefitLinks }));
+    } else if (action === 'experience') {
+      const value = form.get('experience');
+      if (typeof value !== 'string' || !/^(?:\d{1,3})?$/.test(value.trim())) throw new Error('Nhập số năm kinh nghiệm hợp lệ từ 0 đến 999.');
+      await updateContent(slug, current => ({ ...current, experience: value.trim() }));
     } else if (action === 'clients') {
       const value = form.get('clients');
       if (typeof value !== 'string' || !/^(?:\d{1,9}\+?)?$/.test(value.trim())) throw new Error('Nhập số gia đình hợp lệ, ví dụ 120 hoặc 120+.');

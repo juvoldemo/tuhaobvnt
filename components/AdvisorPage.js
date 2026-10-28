@@ -17,14 +17,14 @@ export default function AdvisorPage({ advisor: a }) {
     <section className="hero">
       <div className="hero-sky" /><div className="coast" />
       <header><img className="brand-logo" src="/assets/bao-viet-life-logo-transparent.png" alt="Bảo Việt Life - Bảo Việt Nhân Thọ"/></header>
-      <div className="hero-copy"><p>{a.role}</p><h1>{a.name}</h1>{(a.saoViet || a.award) && <img className="sao-viet-logo" src="/assets/sao-viet-logo.png" alt="Sao Việt"/>}</div>
+      <div className="hero-copy"><p>{!a.role || a.role.trim().toLocaleLowerCase('vi') === 'tư vấn viên' ? 'Tư vấn viên Sao Việt' : a.role}</p><h1>{a.name}</h1><img className="sao-viet-logo" src="/assets/sao-viet-logo.png" alt="Sao Việt"/></div>
       {a.portrait && <div className="portrait-ring">{a.award && <div className="saoviet-mark"><Star/><b>SAO VIỆT</b><small>NHIỀU NĂM LIỀN</small></div>}<img src={a.portrait} alt={a.name}/></div>}
       <div className="gold-swoop" />
     </section>
 
     {(a.region || a.experience || a.clients) && <section className="quick-facts">
       <div><span className="fact-icon fact-brand-logo"><img src="/assets/logo.png" alt="Logo Bảo Việt Nhân Thọ"/></span><span className="fact-copy"><b><span className="fact-nowrap">Bảo Việt Nhân Thọ</span><span className="fact-line">Khánh Hòa</span></b></span></div>
-      <div><span className="fact-icon"><ShieldCheck/></span><span className="fact-copy"><b><span className="fact-lead">{a.experience ? `${a.experience}+` : 'Đang cập nhật'}</span><span>Năm kinh nghiệm</span></b></span></div>
+      <div><span className="fact-icon"><ShieldCheck/></span><span className="fact-copy"><b><span className="fact-lead">{a.experience ? `${String(a.experience).replace(/\+$/, '')}+` : 'Đang cập nhật'}</span><span>Năm kinh nghiệm</span></b></span></div>
       <div><span className="fact-icon"><Users/></span><span className="fact-copy"><b><span className="fact-lead">{a.clients || '—'}</span><span>Gia đình được bảo vệ</span></b>{!a.clients && <small>Đang cập nhật</small>}</span></div>
     </section>}
 
